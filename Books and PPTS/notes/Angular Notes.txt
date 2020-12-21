@@ -1,0 +1,108 @@
+Angular Lab Setup
+-------------------
+1. Install Node.js 8 and above version (https://nodejs.org/en/)
+2. Check instalation of node byu using command node -v
+3. When node is instaled, npm (node package manager) also congfigured
+4. Check npm instalation by using command npm -v
+5. Install Angular CLI using npm install -g @angular/cli with admin privileges
+6. Verify Instalation status of Angular CLI using command ng --version
+
+-------------------------------------------------------------------
+
+Editors
+1. Visual studio code editor (https://code.visualstudio.com/)
+or
+2. Sublime (https://www.sublimetext.com/ )
+
+Databases
+
+1. MySQL
+2. Mongo DB
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. src/main.ts
+2. /app/app.module.ts
+
+app.module.ts
+----------------------
+Major 3 parts
+1. declarations: All CustomComponents (Component which you have created) should be declared
+2. imports: All built-in and user-defined modules which is going to b used in the app, should be declared
+3.providers:(optional) All Service classes which is enjectable (Dependency Injection) should be declared 
+4.bootstrap: Component sequence executed by angular at the time of starting the server
+
+
+CLI Commands
+---------------------------------
+creating new angular app
+ng new my-app
+adding libraries to the anguklar app
+npm install bootstrap,jquery --save 
+
+Start Server
+ng serve --open or ng serve  or ng s or npm start
+Generating new component
+ng generate component greet
+ng generate component product 
+
+
+
+data binding
+----------------
+3 ways of binding
+
+1. Property binding [ ]
+2. Event binding ( )
+3. Two way binding [(ngModel)]
+
+
+3. Two way binding [(ngModel)]
+----------------------------------
+-> by default disbled
+-> to enable 2-way binding, include forms module in the application
+-> forms module shoukd be added in the app.module.ts file in the app folder
+
+
+
+Pipes: formating template date : 2 types
+1. Built in pipes
+2. User defined pipes
+
+
+1. Built in pipes
+-------------------
+
+a. date
+    date, shortDate, fullDate, custom-formating
+
+    
+
+
+
+
+
+
+
