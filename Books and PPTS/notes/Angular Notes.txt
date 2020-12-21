@@ -1,3 +1,25 @@
+Angular Prerequisites
+------------------------
+1. HTML5
+2. CSS / SCSS (bootstrap 4 or 5) -  https://getbootstrap.com/
+3. Java Script Bssics
+4. TypeScript terminology
+
+
+-----------------------------
+bootstrap
+    1. Containers
+    2. Alert
+    3. Grid system
+    4. Card
+    5. Table
+    6. Form
+
+----------------------------
+
+
+
+
 Angular Lab Setup
 -------------------
 1. Install Node.js 8 and above version (https://nodejs.org/en/)
