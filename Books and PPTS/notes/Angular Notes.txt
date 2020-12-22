@@ -85,7 +85,7 @@ adding libraries to the anguklar app
 npm install bootstrap,jquery --save 
 
 Start Server
-ng serve --open or ng serve  or ng s or npm start
+ng serve --open or ng serve  or ng s or npm start or yarn start
 Generating new component
 ng generate component greet
 ng generate component product 
