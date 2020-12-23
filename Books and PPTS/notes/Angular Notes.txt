@@ -84,11 +84,64 @@ ng new my-app
 adding libraries to the anguklar app
 npm install bootstrap,jquery --save 
 
+
+
+
 Start Server
 ng serve --open or ng serve  or ng s or npm start or yarn start
 Generating new component
 ng generate component greet
 ng generate component product 
+
+
+
+=================================================================
+
+Application Execution Order
+------------------------------
+1. package.json and angular.json
+2. loads main.ts from src folder
+3. loads app-module.ts from src/app folder
+
+    Mandate Sections: 3 sections
+    1. declarations : Any custom component shoulod be registered here
+    2. imports : Any Built in or user defined modules should be registered here
+    3. bootstrap : Invocation order of Components when server is starting  
+
+    4.  providers: [] (optional) : Defining any Dependency  claasses
+4. loads AppComponent class from src/app/app.component.ts
+
+        AppComponent class
+        ---------------------------
+        1. Imports
+        2. Declarations of Decarators (@) like @COmponent,@Module,@Pipe,@Injectable etc...
+        3. Class Defination
+5. loads app.component.html in the place of <app-root></app-root> (index.html)
+
+=======================================================================
+
+Note:
+1. ts file with @Component decarator is called component
+2. html file loaded by a component is called template 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
