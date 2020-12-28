@@ -149,7 +149,7 @@ data binding
 ----------------
 3 ways of binding
 
-1. Property binding [ ]
+1. Property binding [ ] : Binging a property from .ts(component file) file to .html(template file) file
 2. Event binding ( )
 3. Two way binding [(ngModel)]
 
@@ -157,8 +157,8 @@ data binding
 3. Two way binding [(ngModel)]
 ----------------------------------
 -> by default disbled
--> to enable 2-way binding, include forms module in the application
--> forms module shoukd be added in the app.module.ts file in the app folder
+-> to enable 2-way binding, include forms module in the application (app.module.ts)
+-> forms module should be added in the app.module.ts (in imports section) file in the app folder
 
 
 

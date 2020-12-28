@@ -1,0 +1,78 @@
+<div class="container">
+  <h1>Data Binding Demo</h1>
+  <hr />
+  <h2>Data Binding: 2 ways</h2>
+  <div>
+
+    <li>Property Binding [ ]</li>
+    <li>Event Binding ( )</li>
+    <li>Two Way Binding [(ngModel)]</li>
+  </div>
+
+  <b><u>Property Binding: [ ] : Binding .ts data to html property attributes</u></b>
+
+  <br />
+
+  <input [value]=cityName />
+
+  <div [align]="positionValue">
+    <h2>Data</h2>
+  </div>
+  <hr />
+
+  <img src="/assets/images/tj1.png" height="200" width="200">
+  <hr />
+  <img [src]="image.path" [height]="image.height" [width]="image.width" />
+  <hr />
+
+
+  <div [hidden]=hideInfo>
+    <li>One</li>
+    <li>Two</li>
+    <li>Thre</li>
+    <li>Four</li>
+    <li>Fiv</li>
+    <li>Sx</li>
+    <li>Sev</li>
+  </div>
+
+  <b><u> Event Binding ( ): Binding of HTML events to a functions in .ts file</u></b>
+  <br />
+  <button (click)=f1()>Click Here</button>
+  <br />
+  <button (click)="f2(cityName)">Click Here</button>
+
+  <hr />
+  <input placeholder="Usr Name" (keyup)="changeUserName($event)" />
+  <h2>{{logedUserName}}</h2>
+
+  <hr />
+
+  <input type="radio" name="gender" value="Male" (change)="checkGender($event)">Male
+  <input type="radio" name="gender" value="Female" (change)="checkGender($event)">Female
+  <hr />
+
+  <input type="checkbox" name="hobbies" value="FoodBall" (click)="checkHobbies($event)">FootBall
+  <input type="checkbox" name="hobbies" value="VolleyBall">Volley Ball
+  <input type="checkbox" name="hobbies" value="Chess">Chess
+  <input type="checkbox" name="hobbies" value="Cricket">Cricket
+
+  <hr />
+
+  <input type="checkbox" (change)="toggleDiv($event)" /> - Hide
+  <div [hidden]="hideDiv">
+    <h1>Sensitive Data</h1>
+  </div>
+
+  <hr />
+
+  <b><u>Two Way Binding [(ngModel)]</u></b>
+
+  <br />
+
+  <input type="text" name="personName" [(ngModel)]="personName"/>
+  <h1>{{personName}}</h1>
+
+  
+
+</div>

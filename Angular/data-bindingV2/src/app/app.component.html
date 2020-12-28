@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Data Binding V2-APP</h1>
+  <hr />
+
+  <div class="col-3">
+    <select class="form-control" name="colorPath" (change)="changeImage($event)">
+      <option value="i20-red">Fiery Red</option>
+      <option value="i20-copper">Metallic Copper</option>
+      <option value="i20-starry">Starry Night</option>
+      <option value="i20-grey">Titan Grey</option>
+      <option value="i20-silver">Typhoon Silver</option>
+
+    </select>
+
+  </div>
+
+  <div>
+    <img [src]="imagePath">
+  </div>
+
+  <br />
+
+  <hr />
+
+</div>
