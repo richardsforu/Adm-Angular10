@@ -161,6 +161,40 @@ data binding
 -> forms module should be added in the app.module.ts (in imports section) file in the app folder
 
 
+Angular Drectices
+----------------------
+1. Structural directives
+2. Attribute directives
+
+
+
+ 1. Structural directives
+-----------------------------
+a. *ngIf
+b. *ngFor
+c. *ngSwitch
+
+
+a. *ngIf
+----------
+i) true or false
+ii) 1 or zero (1 means true)
+iii) null or not null (null means false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Pipes: formating template date : 2 types
 1. Built in pipes

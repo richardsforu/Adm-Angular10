@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Attribue Directives</h1>
+  <hr />
+
+
+  <div [ngStyle]="{'background-color':''}">
+    <h1>Data 1</h1>
+  </div>
+
+  <div [ngStyle]="{'background-color':person.country === 'UK' ? '' : '' }">
+    <h1>Data 2</h1>
+  </div>
+
+
+  <hr />
+
+
+  <div class="row">
+
+    <div *ngFor="let btnLable of buttons" class="col-2 mb-3">
+      <div class="card card-body">
+        <button class="btn" [ngStyle]="{'background-color':btnLable<0 ? 'red' : 'blue' }">{{btnLable}}</button>
+          <hr/>
+        <button [ngClass]="btnLable<0 ? 'btn btn-danger' : 'btn btn-primary'">{{btnLable}}</button>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+</div>

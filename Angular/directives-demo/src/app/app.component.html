@@ -1,0 +1,64 @@
+<div class="container">
+  <h1>Angular Structural Directives Demo</h1>
+
+
+  <hr />
+
+  <div *ngIf="showContent">
+    <h1>Data</h1>
+  </div>
+
+  <div *ngIf="status">
+    <h1>Data 2 </h1>
+  </div>
+
+  <div *ngIf="employee">
+    <h1>Data 3</h1>
+  </div>
+
+  <div class="col-4">
+
+    <form autocomplete="off">
+      <div class="mb-3">
+        <input class="form-control" type="text" name="userName" (keyup)="validateUser($event)" />
+        <span *ngIf="isSubmited && errors.userName" class="text-danger">
+          User Name should be minimum 3 characters long
+        </span>
+      </div>
+
+      <div class="text-center mb-3">
+        <button (click)="handleSubmit($event)" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <hr />
+
+
+  <ul *ngFor="let city of cities">
+    <li>{{city}}</li>
+  </ul>
+  <hr />
+
+  <table class="table">
+    <tbody>
+      <tr *ngFor="let city of cities">
+        <td>{{city}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+
+  <ol>
+    <div *ngFor="let city of cities">
+      <li>{{city}}</li>
+    </div>
+  </ol>
+
+  <div class="row">
+    <div *ngFor="let image of images" class="col-3 mt-2">
+      <img [src]=image height="150" width="250" class="border rounded">
+    </div>
+  </div>
+</div>
