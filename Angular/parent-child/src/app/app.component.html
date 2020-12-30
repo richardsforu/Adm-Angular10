@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Parent to Child Communication</h1>
+  <hr />
+
+  <div class="card">
+    <div class="card-header">App Component</div>
+    <div class="card-body">
+      <h2>App Component</h2>
+
+      <button (click)="greetMessage('Good Morming')" class="btn btn-primary btn-space">Good Morning</button>
+      <button (click)="greetMessage('Good Afternoon')" class="btn btn-primary  btn-space">Good Noon</button>
+      <button (click)="greetMessage('Good Evening')" class="btn btn-primary  btn-space">Good Evening</button>
+
+    </div>
+
+  </div>
+  <hr />
+
+
+  <app-greet [message]=message [personName]=name [n1]=n1 [n2]=n2> </app-greet>
+
+</div>
