@@ -1,27 +1,63 @@
 <div class="col-5">
 
+    <div>
+        <pre>
+            touched: {{productForm.controls.productId.touched}}
+            pristine: {{productForm.controls.productId.pristine}}
+            dirty: {{productForm.controls.productId.dirty}}
+        </pre>
+
+    </div>
+
     <form [formGroup]="productForm" (ngSubmit)="handleSubmit()" autocomplete="off">
         <div class="mb-3">
             <label for="">Product Id</label>
             <input type="text" name="productId" formControlName="productId" class="form-control" />
-            <span *ngIf="fc.productId.errors?.required" class="text-danger">Product Id Required</span>
+            <span *ngIf="isSubmited && fc.productId.errors?.required" class="text-danger">Product Id is Required</span>
+            <span *ngIf="isSubmited && fc.productId.errors?.minlength" class="text-danger">Product Id should be minimum
+                3 characters long</span>
         </div>
 
         <div class="mb-3">
             <label for="">Product Name</label>
             <input type="text" name="productName" formControlName="productName" class="form-control" />
+            <span *ngIf="isSubmited && fc.productName.errors?.required" class="text-danger">Product name is Required</span>
+
         </div>
 
         <div class="mb-3">
             <label for="">Price</label>
             <input type="text" name="price" formControlName="price" class="form-control" />
+            <span *ngIf="isSubmited && fc.price.errors?.required" class="text-danger">Price is Required</span>
+            <span *ngIf="isSubmited && fc.price.errors?.pattern" class="text-danger">Invalid Price</span>
+
         </div>
         <div class="mb-3">
             <label for="">Description</label>
             <textarea name="description" formControlName="description" class="form-control"></textarea>
+            <span *ngIf="isSubmited && fc.description.errors?.required" class="text-danger">Description is Required</span>
+
         </div>
 
+        <div class="mb-3">
+            <label for="">Password</label>
+            <input type="text" name="password" formControlName="password" class="form-control" />
+            <span *ngIf="isSubmited && fc.password.errors?.required" class="text-danger">Password is Required</span>
+            <span *ngIf="isSubmited && fc.password.errors?.invalidPassword" class="text-danger">
+                Invalid Password. min 8 letters with one upper case, 1 lower case and any special symbol.
 
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label for="">Date of Birth (DD-MM-YYYY)</label>
+            <input type="text" name="dob" formControlName="dob" class="form-control" />
+            <span *ngIf="isSubmited && fc.dob.errors?.required" class="text-danger">Date of birth is Required</span>
+            <span *ngIf="isSubmited && fc.dob.errors?.invalidDate" class="text-danger">
+                Date should be in DD-MM-YYYY format
+            </span>
+
+        </div>
 
         <div class="mb-3 text-center">
             <button class="btn btn-primary">Save</button>

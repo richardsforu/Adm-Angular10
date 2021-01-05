@@ -1,0 +1,36 @@
+<div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Flight Number</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Date of Flight</th>
+                <th>Time</th>
+                <th>Duration</th>
+                <th>Fare</th>
+                <th>Available seats</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flights">
+                <td>{{flight.id}}</td>
+                <td>{{flight.flightNumber}}</td>
+                <td>{{flight.origin}}</td>
+                <td>{{flight.destination}}</td>
+                <td>{{flight.flightDate}}</td>
+                <td>{{flight.flightTime}}</td>
+                <td>{{flight.duration}}</td>
+                <td>{{flight.fares.fare}}</td>
+                <td>{{flight.inventory.count}}</td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
