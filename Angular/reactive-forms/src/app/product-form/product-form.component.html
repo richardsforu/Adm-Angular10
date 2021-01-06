@@ -13,7 +13,7 @@
         <div class="mb-3">
             <label for="">Product Id</label>
             <input type="text" name="productId" formControlName="productId" class="form-control" />
-            <span *ngIf="isSubmited && fc.productId.errors?.required" class="text-danger">Product Id is Required</span>
+            <span *ngIf="isSubmited && fc.productId.errors?.required" class="invalid-feedback">Product Id is Required</span>
             <span *ngIf="isSubmited && fc.productId.errors?.minlength" class="text-danger">Product Id should be minimum
                 3 characters long</span>
         </div>

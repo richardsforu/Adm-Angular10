@@ -1,0 +1,26 @@
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Operation1</th>
+                <th>Opereation2</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let product of products">
+                <a [routerLink]="['/find-product',product.id]"><td>{{product.id}}</td></a>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.description}}</td>
+                <td><button class="btn btn-primary" (click)="editProduct(product)">Edit</button></td>
+                <td><button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

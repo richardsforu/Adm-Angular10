@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Routing V1</h1>
+  <hr />
+
+
+
+  <div class="row">
+    <div class="col-2 bg-info">
+
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/home']"
+            routerLinkActive="router-link-active">Home</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/listAll']">List All</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/add-product']">Add Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/find']">Find</a>
+
+        </li>
+      </ul>
+
+    </div>
+
+
+
+    <div class="col-10" [ngStyle]="{'background-color':'lightgrey'}">
+
+      <router-outlet>
+
+      </router-outlet>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>
